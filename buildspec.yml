@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 6.0
+
+  build:
+    commands:
+      - dotnet restore
+      - dotnet publish -c Release -o output
+
+  post_build:
+    commands:
+      - zip -r function.zip output
+
+artifacts:
+  files:
+    - function.zip
