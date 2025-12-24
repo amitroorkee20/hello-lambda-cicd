@@ -7,8 +7,8 @@ phases:
 
   build:
     commands:
-      - dotnet restore
-      - dotnet publish -c Release -o output
+      - dotnet restore hello-lambda.csproj
+      - dotnet publish hello-lambda.csproj -c Release -o output
 
   post_build:
     commands:
