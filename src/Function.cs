@@ -6,9 +6,11 @@ namespace HelloLambda
 {
     public class Function
     {
-        public string FunctionHandler()
+        public string FunctionHandler(object input, ILambdaContext context)
         {
-            return "Hello from Lambda v2";
+            context.Logger.LogLine("HelloLambda invoked successfully 🚀");
+
+            return "Hello from CI/CD + CloudWatch";
         }
     }
 }
