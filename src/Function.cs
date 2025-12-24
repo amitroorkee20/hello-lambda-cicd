@@ -6,10 +6,8 @@ namespace HelloLambda
 {
     public class Function
     {
-        private int Count {get; set;}
         public string FunctionHandler()
         {
-            Count++;
             return "Hello from Lambda v1";
         }
     }
