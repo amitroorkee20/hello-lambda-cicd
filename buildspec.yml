@@ -12,7 +12,8 @@ phases:
 
   post_build:
     commands:
-      - zip -r function.zip output
+      - cd output
+      - zip -r ../function.zip .
 
 artifacts:
   files:
