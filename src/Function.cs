@@ -8,7 +8,7 @@ namespace HelloLambda
     {
         public string FunctionHandler()
         {
-            return "Hello from Lambda v1";
+            return "Hello from Lambda v2";
         }
     }
 }
