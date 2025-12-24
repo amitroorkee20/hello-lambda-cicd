@@ -10,11 +10,7 @@ phases:
       - dotnet restore hello-lambda.csproj
       - dotnet publish hello-lambda.csproj -c Release -o output
 
-  post_build:
-    commands:
-      - cd output
-      - zip -r ../function.zip .
-
 artifacts:
+  base-directory: output
   files:
-    - function.zip
+    - '**/*'
