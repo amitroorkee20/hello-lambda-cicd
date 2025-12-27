@@ -9,8 +9,8 @@ namespace HelloLambda
   {
     public string FunctionHandler(object input, ILambdaContext context)
     {
-      context.Logger.LogLine("About to throw an error ❌");
-      throw new Exception("Intentional failure for alarm test");
+      context.Logger.LogLine("HelloLambda invoked successfully 🚀");
+      return "Hello from CI/CD + CloudWatch";
     }
   }
 }
